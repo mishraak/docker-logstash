@@ -29,7 +29,7 @@ docker build -t <name_of_your_choice> .
 ```	
 
 2. 
-For this to work, download Elasticsearch, Logstash and docker-elk-ui images to your machine inside a folder let's say docker-elk. Now cd to that folder and this image (and other) will be built from scratch automatically when you fire coomand as below :
+For this to work, download Elasticsearch, Logstash and docker-elk-ui images to your machine inside a folder let's say docker-elk.Now cd to that folder and this image (and other) will be built from scratch automatically when you fire coomand as below
 
 ```
 docker-compose up --build
