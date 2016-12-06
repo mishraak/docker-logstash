@@ -3,6 +3,7 @@
 This is a custom image for LS I'm using for my docker-elk project. 
 We are using custom logstash conf file. As you can see in Dockerfile, for a start we are passing a static log file to the LS container.
 We have exposed ports 5044 for filebeat input and 5000 for incoming tcp traffic too.
+You can use docker-compose.yml in this folderto connect my docker-elasticsearch, docker-logstash and docker-elk-ui images together using docker-compose.
 
 ## Getting Started
 
