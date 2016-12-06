@@ -16,18 +16,20 @@ stdout {
 	
 }
 ```
-To test logstash status, start logstash using /opt/logstash/bin -f config <path to your logstash config file>	
+
+Test config file using --configtest flag if you wish to.
+
+To test logstash status, start logstash using /opt/logstash/bin -f config <path_to_your_logstash_config_file>	
 
 Simply build the image using given Dockerfile and config file using docker build command as follows. 
 Clone the repository to your machine and cd into it.
 
 ```	
-docker build -t <name of your choice> .
+docker build -t <name_of_your_choice> .
 ```	
 
 2. 
-For this to work, download Elasticsearch, Logstash and docker-elk-ui images to your machine inside a folder let's say docker-elk.
-   	Now cd to that folder and this image (and other) will be built from scratch automatically when you fire coomand as below :
+For this to work, download Elasticsearch, Logstash and docker-elk-ui images to your machine inside a folder let's say docker-elk. Now cd to that folder and this image (and other) will be built from scratch automatically when you fire coomand as below :
 
 ```
 docker-compose up --build
