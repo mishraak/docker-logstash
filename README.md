@@ -6,16 +6,27 @@ We have exposed ports 5044 for filebeat input and 5000 for incoming tcp traffic 
 You can use docker-compose.yml in this folderto connect my docker-elasticsearch, docker-logstash and docker-elk-ui images together using docker-compose.
 
 ## Getting Started
-
 There are two ways to use this image.
-1. Simply build the image using given Dockerfile and config file using docker build command as follows. 
-   Clone the repository to your machine and cd into it.
+1. 
+If you have spun up only LS container, then you can test it by 
+If you have not set up ES on port 9200, you may comment out elasticsearch output from config and keep only below config to test: 
+	
+```
+stdout {
+	
+}
+```
+To test logstash status, start logstash using /opt/logstash/bin -f config <path to your logstash config file>	
+
+Simply build the image using given Dockerfile and config file using docker build command as follows. 
+Clone the repository to your machine and cd into it.
 
 ```	
 docker build -t <name of your choice> .
 ```	
 
-2. For this to work, download Elasticsearch, Logstash and docker-elk-ui images to your machine inside a folder let's say docker-elk.
+2. 
+For this to work, download Elasticsearch, Logstash and docker-elk-ui images to your machine inside a folder let's say docker-elk.
    	Now cd to that folder and this image (and other) will be built from scratch automatically when you fire coomand as below :
 
 ```
@@ -31,16 +42,6 @@ Please use latest versions for both as some of the commands may not work in olde
 
 
 ## Running the test 
-If you have spun up only LS container, then you can test it by 
-
-If you have not set up ES on port 9200, you may comment out elasticsearch output from config and keep only below config to test: 
-	
-```
-stdout {
-	
-}
-```
-To test logstash status, start logstash using /opt/logstash/bin -f config <path to your logstash config file>	
 
 
 First run below command in cmd (Windows) or terminal (Linux, Mac) to see if LS container is running.
